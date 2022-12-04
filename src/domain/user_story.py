@@ -4,7 +4,7 @@ import json
 
 FIRST_PART = "As a"
 SECOND_PART = "I want to"
-THIRD_PART = "so that I"
+THIRD_PART = "so that"
 
 
 class UserStory:
@@ -24,7 +24,7 @@ class UserStory:
         self.score = score
 
     def __str__(self) -> str:
-        return f"{FIRST_PART} {self.subject} {SECOND_PART} {self.want} {THIRD_PART} {self.reason}"
+        return f"{FIRST_PART} {self.subject}, {SECOND_PART} {self.want}, {THIRD_PART} {self.reason}"
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(id: {self.id}, subject: {self.subject}, want: {self.want}, reason: {self.reason}, score: {self.score})"

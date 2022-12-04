@@ -18,3 +18,11 @@ class Application:
                 self.ui.display_story_list(all_stories)
         except Exception as e:
             self.ui.display_error(str(e))
+
+    def add_story(self) -> None:
+        try:
+            new_story = self.ui.add_story()
+            print(new_story)
+        except Exception as e:
+            self.ui.display_error(str(e))
+            
