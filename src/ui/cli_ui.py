@@ -48,3 +48,15 @@ class CliUi:
             return UserStory(subject=subject, want=want, reason=reason, score=score)
         else:
             return UserStory(subject=subject, want=want, reason=reason)
+
+    def delete_story(self, stories: List[UserStory]) -> UserStory:
+        for i, story in enumerate(stories):
+            print(f"{i}. {str(story)} - Score: {story.score}")
+        user_choice = int(input("Pick a story to delete: "))
+        if user_choice < len(stories):
+            return stories[user_choice]
+        else:
+            raise IndexError("Invalid option")
+
+    def delete_success(self):
+        print("User story deleted.")
