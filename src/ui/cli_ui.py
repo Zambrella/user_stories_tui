@@ -23,10 +23,12 @@ class CliUi:
         print(f"Error: {error}")
 
     def add_story(self) -> UserStory:
-        print("Fill in the blanks\n")
-        subject = input("As a ___ ")
-        want = input(f"As a {subject}, I want to ___ ")
-        reason = input(f"As a {subject}, I want to {want}, so that ___ ")
+        print("Who is the subject? (e.g. user, stakeholder)")
+        subject = input("As a ")
+        print("\nWhat do they want to do?")
+        want = input(f"As a {subject}, I want to ")
+        print(f"\nWhat is the reason for wanting to {want}")
+        reason = input(f"As a {subject}, I want to {want}, so that ")
         score = None
         while True:
             add_score = input("Would you like to add a score? [y/n] ").upper()
@@ -48,6 +50,11 @@ class CliUi:
             return UserStory(subject=subject, want=want, reason=reason, score=score)
         else:
             return UserStory(subject=subject, want=want, reason=reason)
+
+    def add_success(self, story: UserStory):
+        print(str(story))
+        print("User story added successfully")
+        
 
     def delete_story(self, stories: List[UserStory]) -> UserStory:
         for i, story in enumerate(stories):

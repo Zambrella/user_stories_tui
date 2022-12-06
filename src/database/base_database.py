@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod
+from typing import Optional, List
 from domain.user_story import UserStory
 
 class BaseDatabase(ABC):
     
     @abstractmethod
-    def get_all_stories(self) -> UserStory:
+    def get_all_stories(self) -> Optional[List[UserStory]]:
         pass
 
     @abstractmethod
