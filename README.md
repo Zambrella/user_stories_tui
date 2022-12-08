@@ -1,7 +1,7 @@
-[list of stories](/list.png)
-[example of writing a story](/story.png)
+![list of stories](./list.png)
+![example of writing a story](./story.png)
 # User Stories TUI (almost)
-The aim of this project was to create a functional app using Python. Originally I wanted to create a full blown TUI using [Textual](https://github.com/Textualize/textual)but decided to go simple and just keep it as a CLI tool using the similar package [Rich](https://github.com/Textualize/rich).
+The aim of this project was to create a functional app using Python. Originally I wanted to create a full blown TUI using [Textual](https://github.com/Textualize/textual) but decided to go simple and just keep it as a CLI tool using the similar package [Rich](https://github.com/Textualize/rich).
 
 ## Purpose
 The purpose of the app is to make writing and storing [user stories](https://www.atlassian.com/agile/project-management/user-stories) easy.
