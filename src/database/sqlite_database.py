@@ -72,3 +72,12 @@ class SQLiteDatabase(BaseDatabase):
             (story_id,)
         )
         self.con.commit()
+
+    def clear(self) -> None:
+        cur = self.con.cursor()
+        cur.execute(
+            """
+            DELETE FROM stories
+            """
+        )
+        self.con.commit()

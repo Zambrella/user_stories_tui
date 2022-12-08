@@ -42,3 +42,12 @@ class Application:
         except Exception as e:
             print(traceback.format_exc())
             self.ui.display_error(str(e))
+
+    def clear(self) -> None:
+        try:
+            self.ui.clear_confirm()
+            self.database.clear()
+            self.ui.clear_success()
+        except Exception as e:
+            print(traceback.format_exc())
+            self.ui.display_error(str(e))

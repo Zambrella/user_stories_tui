@@ -80,3 +80,10 @@ class JsonDatabase(BaseDatabase):
         except Exception as error:
             print(error)
             raise
+
+    def clear(self) -> None:
+        try:
+            os.remove(STORAGE_LOCATION)
+        except:
+            raise
+            

@@ -24,3 +24,7 @@ class BaseDatabase(ABC):
     def delete_user_story(self, story_id: str) -> None:
         pass
 
+    @abstractmethod
+    def clear(self) -> None:
+        pass
+
